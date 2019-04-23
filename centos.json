@@ -54,16 +54,28 @@
       "type": "virtualbox-iso",
       "vboxmanage": [
         [
-          "modifyvm", "{{.Name}}", "--memory", "{{ user `memory` }}"
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "{{ user `memory` }}"
         ],
         [
-          "modifyvm", "{{.Name}}", "--cpus", "{{ user `cpus` }}"
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "{{ user `cpus` }}"
         ],
         [
-          "modifyvm", "{{.Name}}", "--paravirtprovider", "{{ user `virtualbox_paravirtprovider` }}"
+          "modifyvm",
+          "{{.Name}}",
+          "--paravirtprovider",
+          "{{ user `virtualbox_paravirtprovider` }}"
         ],
         [
-          "modifyvm", "{{.Name}}", "--nictype1", "{{ user `virtualbox_nictype` }}"
+          "modifyvm",
+          "{{.Name}}",
+          "--nictype1",
+          "{{ user `virtualbox_nictype` }}"
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
@@ -86,10 +98,16 @@
       "parallels_tools_flavor": "lin",
       "prlctl": [
         [
-          "set", "{{.Name}}", "--memsize", "{{ user `memory` }}"
+          "set",
+          "{{.Name}}",
+          "--memsize",
+          "{{ user `memory` }}"
         ],
         [
-          "set", "{{.Name}}", "--cpus", "{{ user `cpus` }}"
+          "set",
+          "{{.Name}}",
+          "--cpus",
+          "{{ user `cpus` }}"
         ]
       ],
       "shutdown_command": "{{ user `shutdown_command` }}",
@@ -188,7 +206,7 @@
     "ssh_username": "vagrant",
     "update": "true",
     "vagrantfile_template": "",
-    "version": "1.0.1",
+    "version": "3.0.0",
     "virtualbox_guest_os_type": "RedHat_64",
     "virtualbox_paravirtprovider": "default",
     "virtualbox_nictype": "virtio",
