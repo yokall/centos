@@ -1,7 +1,7 @@
 #!/bin/bash -eux
 
 echo "==> Remove PackageKit"
-yum remove PackageKit
+yum remove -y PackageKit
 
 echo "==> Add epel repo"
 yum install -y epel-release
