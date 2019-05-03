@@ -39,6 +39,9 @@ mysql --connect-expired-password -uroot -p$var -e "ALTER USER 'root'@'localhost'
 mysql --connect-expired-password -uroot -pSuper6ood! -e "uninstall plugin validate_password"
 mysql --connect-expired-password -uroot -pSuper6ood! -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 's2iabos'"
 
+echo "==> Turn off MySQL strict mode"
+echo "sql-mode='NO_ENGINE_SUBSTITUTION'" >> /etc/my.cnf
+
 echo "==> Enable mongod"
 systemctl enable mongod.service
 systemctl restart mongod.service
