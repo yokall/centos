@@ -24,7 +24,7 @@ EOM
 
 echo "==> Install packages"
 yum update -y
-yum install -y gitk perl-CPAN perl-core perl-devel firefox dos2unix htop libxml2-devel libxslt-devel openssl-devel expat-devel tree httpd mysql-server mongodb-org perl-DBD-MySQL
+yum install -y gitk perl-CPAN perl-core perl-devel firefox dos2unix htop libxml2-devel libxslt-devel openssl-devel expat-devel tree httpd mysql-server mongodb-org perl-DBD-MySQL vim-X11 vim-common vim-enhanced vim-minimal
 
 echo "==> Enable httpd"
 systemctl enable httpd.service
