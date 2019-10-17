@@ -42,6 +42,9 @@ mysql --connect-expired-password -uroot -pSuper6ood! -e "ALTER USER 'root'@'loca
 echo "==> Turn off MySQL strict mode"
 echo "sql-mode='NO_ENGINE_SUBSTITUTION'" >> /etc/my.cnf
 
+echo "==> Increase MySQL max allowed package size"
+echo "max_allowed_packet=64M" >> /etc/my.cnf
+
 echo "==> Enable mongod"
 systemctl enable mongod.service
 systemctl restart mongod.service
